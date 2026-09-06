@@ -83,7 +83,7 @@ if modulo == "🏠 Módulo 1: Home":
     with col1:
         st.markdown("### 👨‍💻 Datos del Autor")
         st.markdown("""
-        * **Nombre:** Guillermo M. DOnayre Vásquez
+        * **Nombre:** Guillermo M. Donayre Vásquez
         * **Curso:** Especialización en Python for Analytics
         * **Institución:** DMC Institute
         * **Año:** 2026
@@ -96,7 +96,7 @@ if modulo == "🏠 Módulo 1: Home":
         * **Pandas & NumPy:** Manipulación y cálculo numérico.
         * **Matplotlib & Seaborn:** Visualización avanzada de datos.
         * **Streamlit:** Construcción de la aplicación web interactiva. 
-        * **SGemini Pro:** IA de apoyo.
+        * **Gemini Pro:** IA de apoyo.
         """)
         
     st.markdown("---")
