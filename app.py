@@ -95,26 +95,46 @@ if modulo == "🏠 Módulo 1: Home":
 # ==========================================
 elif modulo == "📂 Módulo 2: Carga de Datos":
     st.title("Carga y Validación del Dataset")
-    st.markdown("Sube tu archivo `InsuranceCompany.csv` para habilitar el motor de análisis exploratorio.")
+    st.markdown("El dataset puede cargarse automáticamente desde el repositorio o mediante la carga manual de un archivo CSV.")
     
-    uploaded_file = st.file_uploader("Cargar archivo CSV", type=["csv"])
+    # URL directa al archivo Raw en GitHub (reemplaza esta URL con la tuya real)
+    GITHUB_CSV_URL = "https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/InsuranceCompany.csv"
     
-    if uploaded_file is not None:
-        # Instanciamos nuestra clase POO
-        analyzer = InsuranceAnalyzer(uploaded_file)
-        
-        st.success("¡Archivo cargado exitosamente!")
-        
-        # Mostrar dimensiones
-        filas, columnas = analyzer.get_shape()
+    # Opción para elegir el método de carga
+    metodo_carga = st.radio(
+        "Seleccione el método de carga de datos:",
+        ["Carga automática desde GitHub", "Subir archivo manualmente (.csv)"]
+    )
+    
+    df_cargado = None
+    
+    if metodo_carga == "Carga automática desde GitHub":
+        try:
+            # Creamos una instancia usando directamente la URL de GitHub
+            analyzer = InsuranceAnalyzer(GITHUB_CSV_URL)
+            st.success("¡Dataset cargado exitosamente desde GitHub!")
+            df_cargado = analyzer
+        except Exception as e:
+            st.error(f"No se pudo cargar automáticamente desde GitHub. Verifica la URL. Error: {e}")
+            
+    else:
+        uploaded_file = st.file_uploader("Cargar archivo CSV manualmente", type=["csv"])
+        if uploaded_file is not None:
+            analyzer = InsuranceAnalyzer(uploaded_file)
+            st.success("¡Archivo cargado exitosamente de forma local!")
+            df_cargado = analyzer
+        else:
+            st.warning("⚠️ Por favor, sube tu archivo `InsuranceCompany.csv` para continuar.")
+            
+    # Si ya tenemos el analyzer listo, mostramos métricas y vista previa
+    if df_cargado is not None:
+        filas, columnas = df_cargado.get_shape()
         col_m1, col_m2 = st.columns(2)
         col_m1.metric("Total de Filas (Clientes/Pólizas)", f"{filas:,}")
         col_m2.metric("Total de Variables (Columnas)", columnas)
         
         st.markdown("### 👁️ Vista Previa del Dataset (Primeros Registros)")
-        st.dataframe(analyzer.get_head(10), use_container_width=True)
+        st.dataframe(df_cargado.get_head(10), use_container_width=True)
         
-        # Guardamos el archivo en la sesión para usarlo en los siguientes módulos
-        st.session_state['analyzer'] = analyzer
-    else:
-        st.warning("⚠️ Por favor, carga el archivo `InsuranceCompany.csv` para continuar.")
+        # Guardamos en la sesión para el Módulo 3 (EDA)
+        st.session_state['analyzer'] = df_cargado
