@@ -60,7 +60,7 @@ if modulo == "🏠 Módulo 1: Home":
     
     st.markdown("""
     ### 🎯 Objetivo del Análisis
-    El propósito de esta aplicación interactiva es analizar el comportamiento histórico de los clientes de una compañía de seguros utilizando el dataset `InsuranceCompany.csv`. El foco principal es explorar y entender **qué factores influyen en la renovación de una póliza de seguro (`renewal`)**, aplicando los conceptos fundamentales aprendidos en el curso de forma integrada y profesional[cite: 1].
+    El propósito de esta aplicación interactiva es analizar el comportamiento histórico de los clientes de una compañía de seguros utilizando el dataset `InsuranceCompany.csv`. El foco principal es explorar y entender **qué factores influyen en la renovación de una póliza de seguro (`renewal`)**, aplicando los conceptos fundamentales aprendidos en el curso de forma integrada y profesional.
     """)
     
     st.markdown("---")
