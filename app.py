@@ -84,6 +84,7 @@ if modulo == "🏠 Módulo 1: Home":
         * **Pandas & NumPy:** Manipulación y cálculo numérico.
         * **Matplotlib & Seaborn:** Visualización avanzada de datos.
         * **Streamlit:** Construcción de la aplicación web interactiva.
+         * **Gemini Pro:** Apoyo de IA.
         """)
         
     st.markdown("---")
