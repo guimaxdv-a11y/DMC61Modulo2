@@ -69,21 +69,21 @@ if modulo == "🏠 Módulo 1: Home":
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 👨‍💻 Datos del Autor / Estudiante")
+        st.markdown("### 👨‍💻 Datos del Autor")
         st.markdown("""
-        * **Nombre:** [Tu Nombre Completo]
-        * **Curso:** Especialización en Python for Analytics[cite: 1]
-        * **Institución:** Dilic Institute[cite: 1]
+        * **Nombre:** Guillermo M. Donayre Vásquez
+        * **Curso:** Especialización en Python for Analytics
+        * **Institución:** DMC Institute
         * **Año:** 2026
         """)
         
     with col2:
         st.markdown("### ⚙️ Tecnologías Utilizadas")
         st.markdown("""
-        * **Python:** Lenguaje principal de programación[cite: 1].
-        * **Pandas & NumPy:** Manipulación y cálculo numérico[cite: 1].
-        * **Matplotlib & Seaborn:** Visualización avanzada de datos[cite: 1].
-        * **Streamlit:** Construcción de la aplicación web interactiva[cite: 1].
+        * **Python:** Lenguaje principal de programación.
+        * **Pandas & NumPy:** Manipulación y cálculo numérico.
+        * **Matplotlib & Seaborn:** Visualización avanzada de datos.
+        * **Streamlit:** Construcción de la aplicación web interactiva.
         """)
         
     st.markdown("---")
