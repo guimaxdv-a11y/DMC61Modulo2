@@ -47,7 +47,7 @@ st.sidebar.subheader("Navegación del Proyecto")
 opciones_menu = [
     "🏠 Módulo 1: Home", 
     "📂 Módulo 2: Carga de Datos", 
-    "📊 Módulo 3: EDA (Próximamente)"
+    "📊 Módulo 3: EDA"
 ]
 modulo = st.sidebar.radio("Seleccione un Módulo:", opciones_menu)
 
