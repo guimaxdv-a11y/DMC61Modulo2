@@ -98,7 +98,7 @@ elif modulo == "📂 Módulo 2: Carga de Datos":
     st.markdown("El dataset puede cargarse automáticamente desde el repositorio o mediante la carga manual de un archivo CSV.")
     
     # URL directa al archivo Raw en GitHub (reemplaza esta URL con la tuya real)
-    GITHUB_CSV_URL = "https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/InsuranceCompany.csv"
+    GITHUB_CSV_URL = "https://raw.githubusercontent.com/guimaxdv-a11y/DMC61Modulo2/refs/heads/main/InsuranceCompany.csv"
     
     # Opción para elegir el método de carga
     metodo_carga = st.radio(
