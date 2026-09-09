@@ -294,4 +294,3 @@ elif modulo == "📊 Módulo 3: EDA (Análisis Exploratorio)":
             4. **Efecto de la Morosidad Histórica:** Las variables de retraso de pagos (`Count_3-6_months_late`, etc.) actúan como los principales indicadores de riesgo para prever la no renovación de las pólizas.
             5. **Área de Residencia:** No se aprecian diferencias drásticas y absolutas en el volumen de renovación global entre zonas urbanas y rurales, lo que sugiere que la estrategia comercial puede mantenerse equilibrada geográficamente pero ajustada al riesgo crediticio individual.
             """)
-            st.success("🎉 ¡Aplicación interactiva EDA completada exitosamente conforme a los requerimientos del caso de estudio!")
